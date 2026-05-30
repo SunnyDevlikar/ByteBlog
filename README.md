@@ -9,7 +9,7 @@
 
 **ByteBlog** is a modern, full‑stack blog platform built with **React**, **Appwrite** (BaaS), and **Tailwind CSS**. It allows developers to create, edit, delete, and read blog posts with image uploads, rich text editing, and authentication. Perfect for sharing coding journeys, tutorials, and debugging stories.
 
-> 🔗 **Live Demo** – [https://byteblog.example.com](https://byte-blog-ebon.vercel.app/)
+> 🔗 **Live Demo** – https://byte-blog-ebon.vercel.app/
 > 📂 **Backend** – Powered by Appwrite Cloud (or self‑hosted)
 
 ---
@@ -51,7 +51,7 @@
 
 1. **Clone the repository**
    ```bash
-   git clone [https://github.com/your-username/byteblog.git](https://github.com/SunnyDevlikar/ByteBlog.git)
+   git clone: https://github.com/SunnyDevlikar/ByteBlog.git
    cd byteblog
    ```
 

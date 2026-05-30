@@ -176,24 +176,6 @@ Project Link: [https://github.com/your-username/byteblog](https://github.com/you
 ⭐ **If you like this project, give it a star!** ⭐
 ```
 
-You can copy this entire markdown and paste it into your `README.md` file. Adjust the live demo link, contact info, and any details specific to your setup. This README is thorough, professional, and will help other developers understand, run, and contribute to your project.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

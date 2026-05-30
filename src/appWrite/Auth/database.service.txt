@@ -1,0 +1,176 @@
+import config from "../../config/config";
+import { Client, ID, TablesDB, Storage, Query } from "appwrite";
+
+export class DatabaseService{
+    client = new Client();
+    databases;
+    bucket;
+
+    constructor(){
+
+        this.client.setEndpoint(config.APPWRITE_URL)
+        .setProject(config.APPWRITE_PROJECT_ID);
+
+        this.databases = new TablesDB(this.client);
+        this.bucket = new Storage(this.client);
+    }
+
+    async createPost({title, slug, content, featuredImage, status, userid}){
+        try {
+                return await this.databases.createRow({
+                    databaseId: config.APPWRITE_DATABASE_ID,
+                    tableId: config.APPWRITE_COLLECTION_ID,
+                    rowId: ID.unique(),
+                    data: {
+                        title,
+                        slug,
+                        content,
+                        featuredImage,
+                        status,
+                        userid
+                    },
+
+                })
+            } catch (error) {
+                console.log(error)
+            }
+    }
+
+    async updatePost(rowId, {title, content, featuredImage, status}){
+        try {
+            return await this.databases.updateRow({
+                databaseId: config.APPWRITE_DATABASE_ID,
+                tableId: config.APPWRITE_COLLECTION_ID,
+                rowId,
+                data:{
+                    title,
+                    content,
+                    featuredImage,
+                    status,
+                },
+            })
+        } catch (error) {
+            console.log(error)
+        }
+
+    }
+
+    async deletePost(rowId){
+        try {
+            await this.databases.deleteRow({
+                databaseId: config.APPWRITE_DATABASE_ID,
+                tableId: config.APPWRITE_COLLECTION_ID,
+                rowId: rowId
+            })
+            return true;
+        } catch (error) {
+            console.log(error)
+            return false;
+        }
+    }
+
+    async getPost(rowId){
+        try {
+            return await this.databases.getRow({
+                databaseId: config.APPWRITE_DATABASE_ID,
+                tableId: config.APPWRITE_COLLECTION_ID,
+                rowId : rowId,
+            })
+        } catch (error) {
+            console.log(error)
+        }
+    }
+
+//     async getPost(slug){
+
+//     try {
+//         return await this.getPostBySlug(slug)
+//     } catch (error) {
+//         console.log(error)
+//     }
+// }
+
+    async getActivePosts( queries = [Query.equal("status", "active")]){
+        try {
+            return await this.databases.listRows({
+                databaseId: config.APPWRITE_DATABASE_ID,
+                tableId: config.APPWRITE_COLLECTION_ID,
+                queries
+            })
+        } catch (error) {
+            console.log(error);
+            return false;
+        }
+    }
+
+
+//    To handle rowID : Given by chatGpt
+        async getPostBySlug(slug) {
+        try {const post = await this.databases.listRows({
+            databaseId: config.APPWRITE_DATABASE_ID,
+            tableId: config.APPWRITE_COLLECTION_ID,
+            queries: [
+                Query.equal("slug", slug),
+                Query.limit(1)
+            ]
+        })
+            if (!post.rows.length) {
+            throw new Error("Post not found")
+            }
+            return post.rows[0]
+        }
+catch (error) {
+        console.log(error)
+        throw error
+    }
+}
+
+
+    //File Upload Service
+    async uploadFile(file){
+        try {
+            return await this.bucket.createFile({
+                bucketId: config.APPWRITE_BUCKET_ID,
+                fileId: ID.unique(),
+                file: file
+            })
+        } catch (error) {
+            console.log(error);
+            return false;
+        }
+    }
+
+    async downloadFile(fileId){
+        try {
+            return await this.bucket.getFileDownload({
+                bucketId: config.APPWRITE_BUCKET_ID,
+                fileId
+            })
+        } catch (error) {
+            console.log(error)
+        }
+    }
+
+    async deleteFile(fileId){
+        try {
+            await this.bucket.deleteFile({
+                bucketId: config.APPWRITE_BUCKET_ID,
+                fileId
+            })
+            return true
+        } catch (error) {
+            console.log(error);
+        }
+    }
+
+    getFilePreview(fileId){
+        return this.bucket.getFilePreview({
+            bucketId: config.APPWRITE_BUCKET_ID,
+            fileId
+        })
+    }
+
+
+}
+
+export const databaseService = new DatabaseService()

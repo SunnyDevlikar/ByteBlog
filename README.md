@@ -136,6 +136,15 @@ Double‑check that your collection attributes exactly match the field names in 
 Change the `content` attribute type from `string` to `text` in the Appwrite console (no length limit).
 
 ---
+---
+## HOME PAGE
+<img width="1897" height="872" alt="image" src="https://github.com/user-attachments/assets/fe4f92b4-971a-4d00-914b-6a855e3c0b2d" />
+
+## ADD POST PAGE
+<img width="1891" height="854" alt="image" src="https://github.com/user-attachments/assets/35da109d-2583-4537-bd9b-fbcfaa4cb3ac" />
+
+
+---
 
 ## 🤝 Contributing
 

@@ -2,6 +2,45 @@
 ```markdown
 # 📝 ByteBlog – Full‑Stack Blog Platform for Developers
 
+# MegaBlog
+
+A full-stack blogging platform built using React and Appwrite that allows users to create, edit, manage, and publish blog posts with authentication and rich text editing support.
+
+## Features
+
+### Authentication
+
+* User Signup
+* User Login
+* User Logout
+* Protected Routes
+* Session Management using Appwrite
+
+### Blog Management
+
+* Create Blog Posts
+* Edit Existing Posts
+* Delete Posts
+* View Published Posts
+* Automatic Slug Generation
+* Featured Image Upload
+
+### Rich Text Editor
+
+* TinyMCE Integration
+* Rich Content Formatting
+* Media Support
+
+### User Experience
+
+* Responsive UI
+* Route Protection
+* Form Validation with React Hook Form
+* Real-Time Slug Generation
+* Image Preview Support
+
+---
+
 ![React](https://img.shields.io/badge/React-18-blue)
 ![Appwrite](https://img.shields.io/badge/Appwrite-1.5-pink)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind-4-06B6D4)
@@ -176,7 +215,6 @@ Change the `content` attribute type from `string` to `text` in the Appwrite cons
 - **User‑friendly toast notifications** (`react-toastify`) instead of `console.log`.
 - **Sentry** for production error tracking.
 - **SEO improvements** – `react-helmet-async` for meta tags.
-- **Pagination** for `/all-posts`.
 - **Comments & likes** – using Appwrite’s realtime database.
 - **Rate limiting** on write operations (Appwrite has some, but custom would be better).
 ---

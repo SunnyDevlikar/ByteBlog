@@ -145,7 +145,20 @@ Change the `content` attribute type from `string` to `text` in the Appwrite cons
 
 
 ---
+## 🐛 Major Challenges & How I Solved Them
 
+| Challenge | Root cause | Fix |
+|-----------|------------|-----|
+| Infinite loop / out‑of‑memory | `<Input>` component calling itself (`<Input>`) instead of `<input>` | Changed to native HTML element. |
+| CORS errors after deployment | Vercel domain not whitelisted in Appwrite | Added the domain to Appwrite Console → Platforms. |
+| Images 404 on Vercel | Bucket `read` permission missing for `any` (unauthenticated) | Added permission `any` → `read` in Storage bucket. |
+| `featuredImage` vs `featuredimage` mismatch | Database attribute had lowercase `i`, code used camelCase | Standardised on `featuredimage` everywhere. |
+| Post not found after creation | Navigated to `/post/${dbPost.$id}` but route expected `slug` | Navigated to `/post/${data.slug}` instead. |
+| TinyMCE invalid API key on deployment | TinyCloud domain not approved | Added Vercel domain to TinyCloud approved domains list. |
+| Content too long error | `content` attribute type was `string` with limit | Changed to `text` in Appwrite collection. |
+---
+
+---
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!  

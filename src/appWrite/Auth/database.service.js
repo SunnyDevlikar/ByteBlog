@@ -30,7 +30,7 @@ export class DatabaseService {
                 }
             );
         } catch (error) {
-            console.log("Error in createPost:", error);
+            throw error.message;
         }
     }
 
@@ -48,7 +48,7 @@ export class DatabaseService {
                 }
             );
         } catch (error) {
-            console.log("Error in updatePost:", error);
+            throw error.message;
         }
     }
 
@@ -61,8 +61,7 @@ export class DatabaseService {
             );
             return true;
         } catch (error) {
-            console.log("Error in deletePost:", error);
-            return false;
+            throw error.message;
         }
     }
 
@@ -74,7 +73,7 @@ export class DatabaseService {
                 documentId
             );
         } catch (error) {
-            console.log("Error in getPost:", error);
+            throw error.message;
         }
     }
 
@@ -86,8 +85,7 @@ export class DatabaseService {
                 queries
             );
         } catch (error) {
-            console.log("Error in getActivePosts:", error);
-            return false;
+            throw error.message
         }
     }
 
@@ -108,8 +106,7 @@ export class DatabaseService {
             }
             return response.documents[0];
         } catch (error) {
-            console.log("Error in getPostBySlug:", error);
-            throw error;
+            throw error.message;
         }
     }
 

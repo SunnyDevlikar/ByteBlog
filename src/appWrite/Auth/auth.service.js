@@ -29,8 +29,7 @@ export class AuthService {
                 return userAccount;
             }
         } catch (error) {
-            console.log("ERROR In Account Creation: ",error)
-            throw error;
+            throw error.message;
         }
     }
 
@@ -39,8 +38,7 @@ export class AuthService {
             return await this.account.createEmailPasswordSession(email, password
         )
         } catch (error) {
-            console.log ( "ERROR IN LOGIN: ", error)
-            throw error;
+            throw error.message;
         }
     }
 
@@ -69,8 +67,7 @@ export class AuthService {
 } catch (err) {
     if(err.code === 401) {
     return null;
-}
-console.error("ERROR: APPWRITE SERVICE:", err);
+}        
         return null;
     }
     }
@@ -79,8 +76,7 @@ console.error("ERROR: APPWRITE SERVICE:", err);
         try {
             await this.account.deleteSessions("current")
         } catch (error) {
-            console.log("ERROR: CANNOT LOG OUT",error)
-            throw error
+            throw error.message;
         }
     }
 

@@ -9,7 +9,7 @@
 
 **ByteBlog** is a modern, full‑stack blog platform built with **React**, **Appwrite** (BaaS), and **Tailwind CSS**. It allows developers to create, edit, delete, and read blog posts with image uploads, rich text editing, and authentication. Perfect for sharing coding journeys, tutorials, and debugging stories.
 
-> 🔗 **Live Demo** – [https://byteblog.example.com](https://byteblog.example.com)  
+> 🔗 **Live Demo** – [https://byteblog.example.com](https://byte-blog-ebon.vercel.app/)
 > 📂 **Backend** – Powered by Appwrite Cloud (or self‑hosted)
 
 ---
@@ -51,7 +51,7 @@
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/your-username/byteblog.git
+   git clone [https://github.com/your-username/byteblog.git](https://github.com/SunnyDevlikar/ByteBlog.git)
    cd byteblog
    ```
 
@@ -140,7 +140,7 @@ Change the `content` attribute type from `string` to `text` in the Appwrite cons
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!  
-Feel free to check the [issues page](https://github.com/your-username/byteblog/issues).
+Feel free to check the [issues page](https://github.com/SunnyDevlikar/byteblog/issues).
 
 1. Fork the project
 2. Create your feature branch (`git checkout -b feature/amazing-feature`)
@@ -167,18 +167,12 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ## 📬 Contact
 
-Your Name – [@your_twitter](https://twitter.com/your_twitter) – email@example.com  
-Project Link: [https://github.com/your-username/byteblog](https://github.com/your-username/byteblog)
+Project Link: 
 
 ---
 
 ⭐ **If you like this project, give it a star!** ⭐
 ```
-
-
-
-
-
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.

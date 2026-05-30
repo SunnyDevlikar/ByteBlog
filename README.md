@@ -142,7 +142,6 @@ Double‑check that your collection attributes exactly match the field names in 
 Change the `content` attribute type from `string` to `text` in the Appwrite console (no length limit).
 
 ---
----
 ## HOME PAGE
 <img width="1897" height="872" alt="image" src="https://github.com/user-attachments/assets/fe4f92b4-971a-4d00-914b-6a855e3c0b2d" />
 
@@ -163,21 +162,19 @@ Change the `content` attribute type from `string` to `text` in the Appwrite cons
 | TinyMCE invalid API key on deployment | TinyCloud domain not approved | Added Vercel domain to TinyCloud approved domains list. |
 | Content too long error | `content` attribute type was `string` with limit | Changed to `text` in Appwrite collection. |
 ---
----
-Learning Outcomes
+## Learning Outcomes
 
 This project helped me gain practical experience with:
 
-React Component Architecture
-Redux State Management
-React Hook Form
-Protected Routing
-Appwrite Authentication
-Database CRUD Operations
-File Upload and Storage
-Rich Text Editors
-Deployment Workflow
----
+- React Component Architecture
+- Redux State Management
+- React Hook Form
+- Protected Routing
+- Appwrite Authentication
+- Database CRUD Operations
+- File Upload and Storage
+- Rich Text Editors
+- Deployment Workflow
 ---
 ## 🛡️ Production‑Grade Considerations
 
@@ -212,6 +209,11 @@ Feel free to check the [issues page](https://github.com/SunnyDevlikar/byteblog/i
 3. Commit your changes (`git commit -m 'Add some amazing feature'`)
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
+
+---
+## Author
+Sunny Devalikar
+Final Year Computer Engineering Student
 
 ---
 

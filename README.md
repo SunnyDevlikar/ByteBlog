@@ -6,39 +6,6 @@
 
 A full-stack blogging platform built using React and Appwrite that allows users to create, edit, manage, and publish blog posts with authentication and rich text editing support.
 
-## Features
-
-### Authentication
-
-* User Signup
-* User Login
-* User Logout
-* Protected Routes
-* Session Management using Appwrite
-
-### Blog Management
-
-* Create Blog Posts
-* Edit Existing Posts
-* Delete Posts
-* View Published Posts
-* Automatic Slug Generation
-* Featured Image Upload
-
-### Rich Text Editor
-
-* TinyMCE Integration
-* Rich Content Formatting
-* Media Support
-
-### User Experience
-
-* Responsive UI
-* Route Protection
-* Form Validation with React Hook Form
-* Real-Time Slug Generation
-* Image Preview Support
-
 ---
 
 ![React](https://img.shields.io/badge/React-18-blue)
@@ -195,6 +162,21 @@ Change the `content` attribute type from `string` to `text` in the Appwrite cons
 | Post not found after creation | Navigated to `/post/${dbPost.$id}` but route expected `slug` | Navigated to `/post/${data.slug}` instead. |
 | TinyMCE invalid API key on deployment | TinyCloud domain not approved | Added Vercel domain to TinyCloud approved domains list. |
 | Content too long error | `content` attribute type was `string` with limit | Changed to `text` in Appwrite collection. |
+---
+---
+Learning Outcomes
+
+This project helped me gain practical experience with:
+
+React Component Architecture
+Redux State Management
+React Hook Form
+Protected Routing
+Appwrite Authentication
+Database CRUD Operations
+File Upload and Storage
+Rich Text Editors
+Deployment Workflow
 ---
 ---
 ## 🛡️ Production‑Grade Considerations

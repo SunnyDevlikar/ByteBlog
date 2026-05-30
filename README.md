@@ -157,6 +157,29 @@ Change the `content` attribute type from `string` to `text` in the Appwrite cons
 | TinyMCE invalid API key on deployment | TinyCloud domain not approved | Added Vercel domain to TinyCloud approved domains list. |
 | Content too long error | `content` attribute type was `string` with limit | Changed to `text` in Appwrite collection. |
 ---
+---
+## 🛡️ Production‑Grade Considerations
+
+### ✅ Already implemented
+
+- Environment variables for all secrets.
+- Error boundaries (React Router default, but customisable).
+- Loading states on homepage.
+- Responsive design with Tailwind.
+- Protected routes.
+- Image cleanup on delete/update.
+
+### 🔜 Would add for v2
+
+- **TypeScript** – catch field name mismatches at compile time.
+- **Unit & integration tests** – Jest + React Testing Library.
+- **User‑friendly toast notifications** (`react-toastify`) instead of `console.log`.
+- **Sentry** for production error tracking.
+- **SEO improvements** – `react-helmet-async` for meta tags.
+- **Pagination** for `/all-posts`.
+- **Comments & likes** – using Appwrite’s realtime database.
+- **Rate limiting** on write operations (Appwrite has some, but custom would be better).
+---
 
 ---
 ## 🤝 Contributing

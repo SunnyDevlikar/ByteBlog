@@ -1,4 +1,3 @@
-Here's a comprehensive README for your GitHub repository. Replace placeholders (like `your-username`, `your-project-name`, etc.) with your actual details.
 
 ```markdown
 # 📝 ByteBlog – Full‑Stack Blog Platform for Developers
